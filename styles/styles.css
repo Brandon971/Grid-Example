@@ -5,3 +5,50 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+header,footer {
+    background-color: cornflowerblue;
+}
+main {
+    background-color: burlywood;
+}
+/* layout */
+body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr 100px;
+    /* min-height: 100vh; */
+    text-align: center;
+}
+img{
+    width: 300px;
+}
+
+main {
+    grid-column: 1 / 4;
+}
+
+.container{
+    display: flex;
+    padding: 10px;
+}
+form{
+    border-radius: 10px;
+    background-color: cadetblue;
+    padding: 10px;
+}
+
+/* media query */
+ @media screen and (max-width: 720px) {
+    .container{
+        flex-flow: column wrap;
+        width: 100%
+    }
+    .container img{
+        width: 100%;
+    }
+    form{
+        width: 100%;
+    }
+}
+
